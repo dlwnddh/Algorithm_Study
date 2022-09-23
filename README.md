@@ -1,10 +1,16 @@
 # GITHUB 사용법
 1. **github 시작**
 
+
+
 2. **공유 repository clone 받기**
+
+
 
 3. **VS Code 열기**
 ![image](https://user-images.githubusercontent.com/109517169/191900818-c76f2abc-2582-4d18-8710-8f7a1a9c02cc.png)
+
+
 
 4. **열심히 코딩하기 (절대 다른 사람 폴더, 파일 건들지 말 것!)**
  
@@ -17,12 +23,16 @@
   
   4-4. 문제는 README.md 파일에 업로드
 
+
+
 5. **저장하고, github에서 commit**
  
   5-1. commit명 : 220923(commit 날짜)_ 이름
  
   5-2. 하단의 commit to master 클릭해서 commit
   ![image](https://user-images.githubusercontent.com/109517169/191902132-337ebf67-37ec-48ae-ace8-88a55a8c2c9c.png)
+
+
 
 6. **마지막으로 Push(혹은 Pull)**
  
