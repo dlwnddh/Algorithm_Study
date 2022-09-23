@@ -14,5 +14,6 @@
 
 
 # 에러발생시
-1. before pull ~~~에러      
-   = git pull 해주고 다시 업로드
+1. ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/dlwnddh/Algorithm_Study.git    
+   = git pull 해주고 다시 push 
