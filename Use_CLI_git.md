@@ -4,7 +4,7 @@
 # CLI 사용하는 스터디 github 사용법
 1. 초기설정     
    git clone        
-   원하는 directory가서 (ex > c:\User\minsub\Documents)
+   원하는 directory가서 (ex > c:\User\minsub\Documents)     
    `$ git clone https://github.com/dlwnddh/Algorithm_Study.git`         
 2. `$ git pull`     
 3. 본인폴더만들고 cpp만들고 열심히 풀이     
