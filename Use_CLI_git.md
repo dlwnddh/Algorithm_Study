@@ -8,3 +8,8 @@
 4. `$ git add -A`       
 5. `$ git commit -m "커밋내용"`(커밋내용 : 220923 문제이름 PS)      
 6. `$ git push -u origin master`     
+
+
+# 에러발생시
+1. before pull ~~~에러      
+   = git pull 해주고 다시 업로드
