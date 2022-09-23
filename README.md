@@ -1,3 +1,16 @@
+# 폴더, 파일, commit명 양식
+월간 폴더 >> 스터디 일간 폴더 내부에 개인별 폴더 만들어서 사용하시면 됩니다
+
+개인 폴더 명 : 스터디 날짜_이름
+
+소스 코드 파일명 : 문제명.cpp
+
+commit명 : commit 하는 날짜_이름
+
+
+![image](https://user-images.githubusercontent.com/109517169/191908320-65a3a9ad-72f5-4693-a1cc-88ffd9701532.png)
+
+
 # GITHUB 사용법
 **1. github 시작**
 
