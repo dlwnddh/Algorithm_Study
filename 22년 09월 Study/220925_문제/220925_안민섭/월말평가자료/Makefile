@@ -1,11 +1,11 @@
 CC=gcc
 RESULT = ssafy
 result: run.o main.o
-	gcc -o $(RESULT) $^
+	$(CC) -o $(RESULT) $^
 run.o : run.c
-	gcc -c $^
+	$(CC) -c $^
 main.o : main.c
-	gcc -c $^
+	$(CC) -c $^
 
 clean: 
 	rm *.o $(RESULT)

@@ -3,7 +3,3 @@
 #include <stdlib.h>
 
 int run();
-//char hist[100][100] = {};
-//int h_idx=0;
-
-
