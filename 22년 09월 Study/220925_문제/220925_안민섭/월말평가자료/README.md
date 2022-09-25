@@ -1,0 +1,6 @@
+# 22/09/26 월말평가 (리눅스 쉘 프로그래밍)
+![image](https://user-images.githubusercontent.com/109576828/192138997-3b327904-870a-4d93-b908-b78b54e1d36a.png)
+1. [Makefile](./Makefile)
+2. [main.c](./main.c)
+3. [run.c](./run.c)
+4. [run.h](./run.h)
