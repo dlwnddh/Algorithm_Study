@@ -41,7 +41,7 @@ void run(){
         }
         // 아무것도 아니면
         else{
-            printf("%s",cmd);
+            //printf("%s",cmd);
             system(cmd);
         }
     }
