@@ -4,3 +4,4 @@
 4. 이중오 문제 -[1245. [S/W 문제해결 기본] 2일차 - 균형점 D5](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15MeBKAOgCFAYD&categoryId=AV15MeBKAOgCFAYD&categoryType=CODE&problemTitle=%EA%B7%A0%ED%98%95%EC%A0%90&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=1)
 5. 양영진 문제 -[5789. - 현주의 상자 바꾸기 D3](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWYygN36Qn8DFAVm)
 6. 고현영 문제 - [1860. 진기의 최고급 붕어빵 D3](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=3&contestProbId=AV5LsaaqDzYDFAXc&categoryId=AV5LsaaqDzYDFAXc&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=3&pageSize=10&pageIndex=14)
+7. 조유빈 문제 - [5431. 민석이의 과제 체크하기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWVl3rWKDBYDFAXm)
