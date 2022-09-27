@@ -5,3 +5,4 @@
 5. 양영진 문제 -[5789. - 현주의 상자 바꾸기 D3](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWYygN36Qn8DFAVm)
 6. 고현영 문제 - [1860. 진기의 최고급 붕어빵 D3](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=3&contestProbId=AV5LsaaqDzYDFAXc&categoryId=AV5LsaaqDzYDFAXc&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=3&pageSize=10&pageIndex=14)
 7. 조유빈 문제 - [5431. 민석이의 과제 체크하기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWVl3rWKDBYDFAXm)
+8. 고경훈 문제 - [13240. 정사각형 글꼴 D4](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=3&problemLevel=4&contestProbId=AX1Zl87ad94DFAQX&categoryId=AX1Zl87ad94DFAQX&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=CCPP&select-1=4&pageSize=10&pageIndex=2)
