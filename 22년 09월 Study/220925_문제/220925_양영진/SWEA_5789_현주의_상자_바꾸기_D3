@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int test_case;
+	int T;
+	int N, Q, L, R;
+
+	cin >> T;
+
+
+	for (test_case = 1; test_case <= T; test_case ++)
+	{
+
+		cin >> N >> Q;
+
+		int arr[1000] = { 0 };
+
+		for (int i = 1; i <= Q; i++)
+		{
+			cin >> L >> R;
+
+			for (int c = L; c <= R; c++)
+			{
+				arr[c] = i;
+			}
+
+		}
+
+
+		cout << "#" << test_case;
+
+		for (int result = 1; result <= N; result++)
+		{
+			cout << " " << arr[result];
+
+		}
+		cout << endl;
+	}
+	return 0;
+}
