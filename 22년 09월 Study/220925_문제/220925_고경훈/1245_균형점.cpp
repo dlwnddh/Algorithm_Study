@@ -56,7 +56,7 @@ double dobinary(double L, double R) {
     double z = (L + R) / 2;
     double sF = netforce(z);
     if (sF >= (-1) * delta && sF <= delta) return z;
-    else if (sF > 0) dobinary(z, R);
+    else if (sF < 0) dobinary(z, R);
     else dobinary(L, z);
 }
 
