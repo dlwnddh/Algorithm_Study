@@ -7,6 +7,16 @@ int W;
 int N;
 int lengths[1000];
 int maxl = -1; // Maximum value in lengths[] array
+
+
+int stlen(char* c){
+    for(int i = 0; i < 1000; i++){
+        if(c[i] == '\0'){
+            return i;
+        }
+    }
+    return 1000;
+}
  
  
 int min(int a, int b){
@@ -30,7 +40,7 @@ void getinput(){
     for(int x = 0; x < N; x++){
         char temp[1000] = { 0, };
         scanf("%s", &temp);
-        lengths[x] = strlen(temp);
+        lengths[x] = stlen(temp);
         if(maxl < lengths[x]) maxl = lengths[x];
     }
 }
