@@ -1,7 +1,8 @@
-#define _CRT_SECURE_NO_WARNINGS
+// #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <queue>
-#define delta 0.00000000001
+#define delta 0.000000000001 // 1E-12
+#define sdelt 0.000000000000001 // 1E-15
 struct object {
     int x;
     int m;
@@ -13,6 +14,8 @@ int N;
 double F;
 object obs[10];
 double balancedpoints[9];
+double recentsF;
+bool isfirstrcsv = false;
 
 
 double force(double x, int n) { // objectnumber n
@@ -53,16 +56,31 @@ void sortobs() {
 
 
 double dobinary(double L, double R) {
+    double RL = R - L;
     double z = (L + R) / 2;
     double sF = netforce(z);
-    if (sF >= (-1) * delta && sF <= delta) return z;
-    else if (sF > 0) dobinary(z, R);
+    double dif_now_before = sF - recentsF;
+    if (
+        !isfirstrcsv &&
+        (-1) * sdelt < dif_now_before &&
+        dif_now_before < sdelt
+        ) {
+        return z;
+    }
+    recentsF = sF;
+    isfirstrcsv = false;
+    if (RL < delta) return z;
+    else if (sF < 0) dobinary(z, R);
     else dobinary(L, z);
 }
 
 
 void run() {
     for (int i = 0; i < N - 1; i++) {
+        if (i == 1) {
+            int dummy = 0;
+        }
+        isfirstrcsv = true;
         double tempres = dobinary(obs[i].x, obs[i + 1].x);
         balancedpoints[i] = tempres;
     }
@@ -88,6 +106,8 @@ void init() {
     }
     N = 0;
     F = 0;
+    recentsF = 0;
+    isfirstrcsv = false;
 }
 
 
