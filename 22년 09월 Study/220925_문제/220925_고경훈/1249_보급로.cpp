@@ -1,5 +1,6 @@
 #include <iostream>
 #include <queue>
+#define BIG 2147483647
 
 struct node{
     int y;
@@ -7,13 +8,17 @@ struct node{
     int val;
 };
 
-int map[100][100];
+int map[100][100] = { 0, };
 int N;
-int dY[4] = {-1, 0, 1, 0};
-int dX[4] = {0, 1, 0, -1};
+const int dY[4] = {-1, 0, 1, 0};
+const int dX[4] = {0, 1, 0, -1};
+int dijk[100][100] = { BIG, };
 
 void init(){
-    for(int y = 0; y < N; y++) for(int x = 0; x < N; x++) map[y][x] = 0;
+    for(int y = 0; y < N; y++) for(int x = 0; x < N; x++){
+        map[y][x] = 0;
+        dijk[y][x] = BIG;
+    }
     N = 0;
 }
 
