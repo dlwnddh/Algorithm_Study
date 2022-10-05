@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int 
+
 int main(){
     // data input phase
     int TC = 0;
@@ -15,7 +17,7 @@ int main(){
         for(int i = 0; i < N; i++) scanf("%d", &secs[i]);
     // ******** //
 
-    
+
 
         printf("#%d ", tc);
 
