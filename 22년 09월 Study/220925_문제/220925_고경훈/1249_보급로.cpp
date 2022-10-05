@@ -9,10 +9,10 @@ struct node{
 };
 
 int map[100][100] = { 0, };
+int dijk[100][100] = { BIG, };
 int N;
 const int dY[4] = {-1, 0, 1, 0};
 const int dX[4] = {0, 1, 0, -1};
-int dijk[100][100] = { BIG, };
 
 void init(){
     for(int y = 0; y < N; y++) for(int x = 0; x < N; x++){
