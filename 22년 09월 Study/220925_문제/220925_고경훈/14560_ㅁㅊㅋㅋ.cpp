@@ -11,7 +11,7 @@
 #define R if(endflag) return
 #define A 7
 #define B 31
-#define D long long a = A; long long b = B
+#define D int a = A; int b = B
 using namespace std;
 
 char path[1000] = { 0, };
@@ -20,19 +20,19 @@ int maxN = -1;
 
 ofstream fout;
 
-void rcsv(long long a, long long b, int rcslimit, int rcs) {
+void rcsv(int a, int b, int rcslimit, int rcs) {
 	char line2[1000] = { 0, };
 	char sline[1000] = { 0, };
 	R;
-	long long ca = a;
-	long long cb = b;
+	int ca = a;
+	int cb = b;
 	if (a == b) {
 		if (maxN < rcs) maxN = rcs;
 		strncpy(sline, path, rcs);
-		printf("answer: %20s with value %8lld, N = %4d, [maxN: %d]\n", sline, a, rcs, maxN);
+		printf("answer: %20s with value %8d, N = %4d, [maxN: %d]\n", sline, a, rcs, maxN);
 
-		// sprintf(line2, "%40s %11lld %4d", sline, a, rcs); // (2)
-		sprintf(line2, "\"%s\", %lld, %d},", sline, a, rcs);
+		// sprintf(line2, "%40s %11d %4d", sline, a, rcs); // (2)
+		sprintf(line2, "\"%s\", %d, %d},", sline, a, rcs);
 		fout << line2 << "\n";
 		endflag = true;
 		return;
@@ -66,11 +66,11 @@ int main() {
 
 	fout.open("resu.txt");
 	fout << "// { {a, b}, \"string\", value, N}" << "\n\n";
-	for (long long a = 10; a >= 0; a--) for (long long b = 10; b > a; b--) {
+	for (int a = 10; a >= 0; a--) for (int b = 10; b > a; b--) {
 		char line1[100] = { 0, };
-		printf("With a = %4lld and b = %4lld ", a, b);
-		// sprintf(line1, "%4lld %4lld ", a, b); // (1)
-		sprintf(line1, "{ {%lld, %lld}, ", a, b);
+		printf("With a = %4d and b = %4d ", a, b);
+		// sprintf(line1, "%4d %4d ", a, b); // (1)
+		sprintf(line1, "{ {%d, %d}, ", a, b);
 		fout << line1;
 		int n = 1;
 		while (1) {
