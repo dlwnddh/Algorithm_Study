@@ -70,7 +70,7 @@ int main() {
 		char line1[100] = { 0, };
 		printf("With a = %4lld and b = %4lld ", a, b);
 		// sprintf(line1, "%4lld %4lld ", a, b); // (1)
-		sprintf(line1, "{ {%d, %d}, ", a, b);
+		sprintf(line1, "{ {%lld, %lld}, ", a, b);
 		fout << line1;
 		int n = 1;
 		while (1) {
