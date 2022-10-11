@@ -43,7 +43,7 @@ bool outofmap(int y, int x) {
         y < 0 ||
         x >= N ||
         x < 0) return true;
-    else return false;
+    return false;
 }
 
 

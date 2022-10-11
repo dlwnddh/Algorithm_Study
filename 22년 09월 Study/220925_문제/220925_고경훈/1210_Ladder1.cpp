@@ -13,22 +13,18 @@ bool outrange(int x){
 
 int gogo(int y, int x){
     if(y == 0) return x;
-
-    bool found = false;
+    
+    #define IFNX if(outrange(nx)) {}\
+    else if(map[y][nx] == 1){\
+        map[y][x] = 0;\
+        return gogo(y, nx);\
+    }
 
     int nx = x + 1;
-    if(outrange(nx)) {}
-    else if(map[y][nx] == 1){
-        map[y][x] = 0;
-        return gogo(y, nx);
-    }
+    IFNX
 
     nx = x - 1;
-    if(outrange(nx)) {}
-    else if(map[y][nx] == 1){
-        map[y][x] = 0;
-        return gogo(y, nx);
-    }
+    IFNX
 
     return gogo(y - 1, x);
 }
