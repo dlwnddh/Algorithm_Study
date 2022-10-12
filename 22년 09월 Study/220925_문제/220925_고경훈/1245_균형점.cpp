@@ -1,35 +1,36 @@
 // #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <queue>
-#define delta 0.000000000001 // 1E-12
-#define sdelt 0.000000000000001 // 1E-15
-struct object {
+#define E_12 0.000000000001 // 1E-12
+#define E_15 (E_12 * 0.001) // 1E-15
+
+struct obj {
     int x;
     int m;
 };
 using namespace std;
-
+typedef double db;
 
 int N;
-double F;
-object obs[10];
-double balancedpoints[9];
-double recentsF;
+db F;
+obj obs[10];
+db bdps[9];
+db recentsF;
 bool isfirstrcsv = false;
 
 
-double force(double x, int n) { // objectnumber n
+db force(db x, int n) { // objnumber n
     // <- direction force is (-)
     // -> direction force indicated by (+)
 
-    double amount = obs[n].m / ((x - obs[n].x) * (x - obs[n].x));
+    db amount = obs[n].m / ((x - obs[n].x) * (x - obs[n].x));
     if (obs[n].x < x) return (-1) * amount;
     else return amount;
 }
 
 
-double netforce(double x) {
-    double netforce = 0;
+db netforce(db x) {
+    db netforce = 0;
     for (int i = 0; i < N; i++) {
         netforce += force(x, i);
     }
@@ -39,39 +40,39 @@ double netforce(double x) {
 
 void sortobs() {
     struct fuck_yeah {
-        bool operator()(object a, object b) {
+        bool operator()(obj a, obj b) {
             return a.x > b.x;
         }
     };
-    priority_queue<object, vector<object>, fuck_yeah> pq;
+    priority_queue<obj, vector<obj>, fuck_yeah> pq;
     for (int i = 0; i < N; i++) {
         pq.push(obs[i]);
     }
     for (int i = 0; i < N; i++) {
-        object temp = pq.top();
+        obj temp = pq.top();
         obs[i] = temp;
         pq.pop();
     }
 }
 
 
-double dobinary(double L, double R) {
-    double RL = R - L;
-    double z = (L + R) / 2;
-    double sF = netforce(z);
-    double dif_now_before = sF - recentsF;
+db bnr(db L, db R) {
+    db RL = R - L;
+    db z = (L + R) / 2;
+    db sF = netforce(z);
+    db dif_now_before = sF - recentsF;
     if (
         !isfirstrcsv &&
-        (-1) * sdelt < dif_now_before &&
-        dif_now_before < sdelt
+        (-1) * E_15 < dif_now_before &&
+        dif_now_before < E_15
         ) {
         return z;
     }
     recentsF = sF;
     isfirstrcsv = false;
-    if (RL < delta) return z;
-    else if (sF < 0) dobinary(z, R);
-    else dobinary(L, z);
+    if (RL < E_12) return z;
+    else if (sF < 0) bnr(z, R);
+    else bnr(L, z);
 }
 
 
@@ -81,16 +82,16 @@ void run() {
             int dummy = 0;
         }
         isfirstrcsv = true;
-        double tempres = dobinary(obs[i].x, obs[i + 1].x);
-        balancedpoints[i] = tempres;
+        db tempres = bnr(obs[i].x, obs[i + 1].x);
+        bdps[i] = tempres;
     }
 }
 
 
 void bpprint() {
     for (int i = 0; i < N - 1; i++) {
-        if (i != N - 2) printf("%.10lf ", balancedpoints[i]);
-        else printf("%.10lf ", balancedpoints[i]);
+        if (i != N - 2) printf("%.10lf ", bdps[i]);
+        else printf("%.10lf ", bdps[i]);
     }
     printf("\n");
 }
@@ -102,7 +103,7 @@ void init() {
         obs[i].m = 0;
     }
     for (int i = 0; i < 9; i++) {
-        balancedpoints[i] = 0;
+        bdps[i] = 0;
     }
     N = 0;
     F = 0;
@@ -127,10 +128,6 @@ int main() {
         run();
         printf("#%d ", tc);
         bpprint();
-
-    } // End of single testcase
-
-
-
+    }
     return 0;
 }

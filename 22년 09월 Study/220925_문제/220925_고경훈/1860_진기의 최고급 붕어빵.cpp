@@ -36,6 +36,7 @@ int main() {
 
         // printing phase
         printf("#%d ", tc);
+
         if (flagok) printf("Possible\n");
         else printf("Impossible\n");
     } // End of for loop (or single testcase)
