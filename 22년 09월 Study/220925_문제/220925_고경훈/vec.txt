@@ -1,0 +1,9 @@
+ex) vector<int> v;
+
+1) v.clear();
+
+2) while(v.size() > 0){
+    v.pop_back();
+}
+
+3) v = vector<int>();
