@@ -1,5 +1,6 @@
 # 제일 중요한거
 자기꺼 말고 삭제 수정 금지!
+![image](https://user-images.githubusercontent.com/109576828/192080705-950c673c-9056-4b41-a0c4-a3cd848c2ef2.png)
 
 # CLI 사용하는 스터디 github 사용법
 1. 초기설정     

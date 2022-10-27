@@ -1,0 +1,9 @@
+{
+  "files.associations": {
+    "iostream": "cpp",
+    "queue": "cpp",
+    "13240.C": "cpp",
+    "13240_정사각형 글꼴.C": "cpp",
+    "1247_최적 경로.C": "cpp"
+  }
+}
